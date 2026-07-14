@@ -1,0 +1,51 @@
+# Environment variables — never commit real credentials
+.env
+.env.*
+!.env.example
+
+# SSH keys — never commit private or public keys
+*.key
+*.pem
+*.pub
+id_rsa
+id_ed25519
+
+# Coolify source and config (contains secrets)
+/data/coolify/source/.env
+
+# n8n data directory (contains credentials and workflow data)
+.n8n/
+n8n-data/
+postgresql-data/
+
+# Docker volumes and override files
+docker-compose.override.yml
+docker-compose.local.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+upgrade-*.log
+installation-*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# ngrok config (contains authtoken)
+ngrok.yml
+ngrok.yaml
+
+# Cloudflare tunnel credentials
+.cloudflared/
